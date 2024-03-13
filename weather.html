@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weathering With You</title>
+    <link rel="stylesheet" href="css/weather.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="inputbox">
+        <input type="text" name="search" id="SBox" class="inpSerch" />
+        <label for="search" class="holder">Enter Your City</label>
+        <button class="btn">
+          <div class="material-icons">search</div>
+        </button>
+      </div>
+    </div>
+    <div class="resultbox">
+      <div class="decsription">Weather Mood</div>
+      <div class="imgbox">
+        <img
+          src="https://freepngimg.com/thumb/weather/23529-2-weather-hd-thumb.png"
+          alt=""
+          class="Wicon"
+        />
+      </div>
+
+      <div class="innerres">
+        <div class="temp">
+          <span>Temperature</span>
+          <img
+            src="https://static.thenounproject.com/png/1979336-200.png"
+            alt=""
+          />
+          <p class="tempdata"></p>
+        </div>
+        <div class="wind">
+          <span>Wind</span>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3731/3731279.png"
+            alt=""
+          />
+          <p class="winddata"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/weather.js"></script>
+</html>

@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-image: url("https://wallpapercave.com/wp/wp11661206.jpg");
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.container {
+  width: 375px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputbox {
+  position: relative;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.inputbox .inpSerch {
+  width: 100%;
+  max-width: 390px;
+  box-sizing: border-box;
+  padding: 6px;
+  margin: 0px 5px;
+  outline: none;
+  border-bottom: 2px solid;
+  margin-left: 1rem;
+  border: 0px;
+}
+.inputbox .holder {
+  position: absolute;
+  left: 34px;
+  top: 2px;
+  font-size: 20px;
+  transition: 0.4s ease-in-out;
+
+  padding: 4px;
+}
+.inpSerch:focus + .holder {
+  top: -17px;
+  font-size: 15px;
+}
+
+#SBox {
+  width: 85%;
+  height: 40px;
+  padding: 15px;
+  background-color: transparent;
+  border-bottom: 2px solid;
+}
+
+.btn {
+  margin-top: 10px;
+  font-family: Roboto, sans-serif;
+  font-weight: 0;
+  font-size: 14px;
+  color: #fff;
+  background-color: #0066cc;
+  padding: 10px 30px;
+  border: 2px solid #0066cc;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 50px;
+  transition: 1000ms;
+  transform: translateY(0);
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: 1000ms;
+  padding: 10px 50px;
+  transform: translateY(-0px);
+  background-color: #fff;
+  color: #0066cc;
+  border: solid 2px #0066cc;
+}
+
+/* end */
+.resultbox {
+  width: 325px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  /* backdrop-filter: blur(4px); */
+  /* background: linear-gradient(to bottom, skyblue, #a0d8ff); */
+  background: linear-gradient(to bottom, skyblue, #a0d8ff, #87bfff, #5ca6ff);
+  /* background: linear-gradient(to bottom, #87ceeb, skyblue, #a0d8ff, #b3e0ff); */
+  flex-direction: column;
+  border: 1px solid;
+  border-radius: 12px;
+}
+
+.imgbox img {
+  width: 140px;
+  height: 140px;
+}
+.decsription {
+  margin-top: 20px;
+}
+
+.innerres {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 85%;
+  height: 240px;
+  text-align: center;
+}
+
+.temp > img {
+  width: 60px;
+}
+
+.wind img {
+  width: 60px;
+}
+span {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}

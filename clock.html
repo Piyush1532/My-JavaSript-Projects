@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-image: linear-gradient(
+          50deg,
+          hsl(39deg 100% 72%) 0%,
+          hsl(28deg 100% 71%) 9%,
+          hsl(14deg 100% 72%) 18%,
+          hsl(354deg 100% 73%) 27%,
+          hsl(337deg 97% 68%) 36%,
+          hsl(318deg 68% 59%) 45%,
+          hsl(298deg 49% 54%) 55%,
+          hsl(286deg 51% 55%) 64%,
+          hsl(274deg 54% 56%) 73%,
+          hsl(261deg 55% 57%) 82%,
+          hsl(247deg 56% 58%) 91%,
+          hsl(230deg 60% 54%) 100%
+        );
+        font-size: 3.2em;
+        font-family: "Open Sans", sans-serif;
+      }
+    
+      #clock-container {
+        border: 2px solid;
+        height: 220px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+
+        filter: invert(100);
+        position: absolute;
+      }
+
+    </style>
+  </head>
+  <body>
+
+      <div id="clock-container">
+        <div id="hours"></div>
+        <div id="minutes"></div>
+        <div id="seconds"></div>
+        <div id="ampm"></div>
+      </div>
+  
+  </body>
+  <script>
+    function Clock() {
+      const now = new Date();
+      let hours = now.getHours();
+      let minutes = now.getMinutes().toString().padStart(2, "0");
+      let seconds = now.getSeconds();
+      let ampm = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12 || 12;
+
+      let h = document.getElementById("hours");
+      h.textContent = `${hours}:`;
+      let m = document.getElementById("minutes");
+      m.textContent = `${minutes}:`;
+      let s = document.querySelector("#seconds");
+      s.textContent = `${seconds}`;
+      let pmam = document.getElementById("ampm");
+      pmam.textContent = `${ampm}`;
+    }
+
+    setInterval(Clock, 1000);
+    Clock();
+  </script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Api</title>
+    <style>
+        img{
+            width: 100%;
+            height: 250px;
+        }
+        .news-container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+        .news-container >div{
+            width: 450px;
+            height: 450px;
+            border: 2px solid black;
+            margin: 10px;
+            overflow: hidden;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="news-container">
+
+    </div>
+  </body>
+  <script>
+     let NewsApi="https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=51663eacf9ad40e4951abc9e41bbf44e"
+     let Newscontainer=document.querySelector(".news-container");
+   (  async function GetNews(){
+        try {
+            let FetchNews= await fetch(NewsApi)
+        // console.log(FetchNews);
+        let NewsData= await FetchNews.json()
+        console.log(NewsData);
+
+        if (NewsData.status ==="ok") {
+           NewsData.articles.forEach(article=>{
+            let ArticleContainer=document.createElement("div")
+            ArticleContainer.classList.add("myclass1")
+            ArticleContainer.innerHTML=`<h3>${article.title}</h3>
+            <p>${article.description}</p>
+            <img src=${article.urlToImage}>
+            <h5>Author:${article.author}</h5>`
+
+            Newscontainer.appendChild(ArticleContainer)
+           })
+        } else {
+            console.error(data.message)
+        }
+        } catch (error) {
+            console.log(error);
+        }
+     
+     })();
+    // GetNews()
+  </script>
+</html>
