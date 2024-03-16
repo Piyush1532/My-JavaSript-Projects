@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link rel="stylesheet" href="./css/logresgistration.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="formbox">
+            <div class="btnbox">
+                <div id="btn"></div>
+                <button type="button" class="togglebtn" onclick="login()">Login</button>
+                <button type="button" class="togglebtn" onclick="register()">Register</button>
+            </div>
+            <div class="socialicons">
+                <img src="https://us.123rf.com/450wm/aiart30/aiart302303/aiart30230306926/201046196-turkish-lira-sign-black-icon-on-a-white-background-vector-illustration.jpg?ver=6"
+                    alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/X_icon.svg/2048px-X_icon.svg.png"
+                    alt="">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-icon.png"
+                    alt="">
+            </div>
+            <form class="inputgroup" id="login">
+                <input type="text" class="inputfield" placeholder="User Id">
+                    <input type="text" class="inputfield" placeholder="Enter Password">
+                    <input type="checkbox" class="checkbox"> <span>Remenber Password</span>
+                    <button type="submit" class="submitbtn">Login</button>
+            </form>
+            <form class="inputgroup" id="register">
+                <input type="text" class="inputfield" placeholder="Email Id">
+                    <input type="text" class="inputfield" placeholder="Enter password">
+                    <input type="email" class="inputfield" placeholder="Enter password">
+                    <input type="checkbox" class="checkbox"> <span>I Agree to terms and condition</span>
+                    <button type="submit" class="submitbtn">Register</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+<script src="./js/logregistration.js"></script>
+
+</html>
