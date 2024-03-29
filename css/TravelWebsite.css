@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+.header{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("https://wallpapers.com/images/high/japan-4k-fuji-cherry-blossoms-qbc6mlnwowjbszld.webp");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+padding-top: 20px;
+text-align: center;
+color: white;
+}
+.header img{
+    width: 170px;
+    float: left;
+}
+.loginBtn{
+    width: 100px;
+    padding: 8px 0px;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 50px;
+    background: transparent;
+    color: white;
+    float: right;
+}
+.header h1{
+    padding-top: 175px;
+    padding-bottom: 0;
+    font-size: 55px;
+}
+.header p{
+    margin: 18px 0px;
+}
+.input-group{
+    width: 90%;
+    max-width: 500px;
+    border-radius: 30px;
+    background: #fff;
+    margin: auto;
+    padding: 2px ;
+}
+.form-control{
+    border: 0 !important;
+    border-radius: 30px !important;
+    margin: 2px;
+    box-shadow: none !important;
+}
+.input-group-text{
+    width: 100px;
+    border: 0 !important;
+    color: #fff !important;
+    padding: 0 25px !important;
+    border-radius: 30px !important;
+    box-shadow: none !important;
+    background: linear-gradient(230deg, #fbd3e9, #bb377d);
+}
+
+
+/* features */
+
+.features{
+    padding: 75px 0;
+}
+h1{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.featureImg img{
+    width: 100%;
+}
+.price{
+    width: 50px;
+    height: 50px;
+    background: #ff5722;
+    color: white;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 12px 1px 0px 8px;
+    box-shadow: 0 0 10px 1px rgba(37,73,214,0.18);
+    position: absolute;
+    left: 20px;
+    bottom: -25px;
+}
+.featureImg{
+    position: relative;
+}
+.rating{
+    padding: 3px;
+    float: right;
+    background: #fff;
+    bottom: -1px;
+    right: 0;
+    position: absolute;
+}
+.features .fa{
+    font-size: 15px;
+    color: #ff5722;
+}
+.featureDetails{
+    padding: 30px 5px;
+    text-align: justify;
+}
+.featureDetails h4{
+    font-weight: 600;
+}
+.featureDetails .fa{
+margin-right: 5px;
+}
